@@ -3,9 +3,12 @@
 The docker compose example for setup...
 - postgresql-read-replica mode
 
+# clone this repo on both instance A and B 
 # on instance A
 - cd postgres-replica-containers/postgresql-master/
-- and run docker-init.sh
+- sudo chmod a+x ./docker-init.sh
+- sudo chmod a+x ./validate-synce.sh
+- ./docker-init.sh
 - cd ~/ 
 - mkdir ~/data-slave
 - sudo chmod a+x -R ~/data-slave/
@@ -32,4 +35,8 @@ The docker compose example for setup...
 - sudo cp -r ~/data-slave/* postgres-replica-containers/postgresql-slave/data-slave/
 - edit ip @ postgres-replica-containers/postgresql-master/data-slave/postgresql.auto.conf 
 - cd postgres-replica-containers/postgresql-slave/
-- and run docker-init.sh
+- sudo chmod a+x ./docker-init.sh
+- ./docker-init.sh
+
+# on instance A
+- ./validate-synce.sh
