@@ -21,6 +21,7 @@ The docker compose example for setup...
 - sudo chmod a+x -R ~/data-slave/
 - sudo chmod a+w -R ~/data-slave/
 - sudo chmod a+r -R ~/data-slave/
+- mkdir postgres-replica-containers/postgresql-slave/data-slave
 
 # on instance A 
 - ssh -i ~/.ssh/id_rsa ubuntu@instance-B-pub-IP
