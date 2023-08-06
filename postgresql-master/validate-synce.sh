@@ -1,0 +1,1 @@
+docker exec -it postgres_master sh /etc/postgresql/init-script/validate.sh
